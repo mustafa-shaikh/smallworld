@@ -1,0 +1,16 @@
+.header {
+    background-color: rgb(224, 221, 221);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-top: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 12;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  

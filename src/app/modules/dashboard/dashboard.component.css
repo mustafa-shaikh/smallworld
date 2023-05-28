@@ -1,0 +1,25 @@
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  /* Add styling for the header */
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+}
+
+.sidebar {
+  border-right: 1px solid #ccc;
+
+  /* Add styling for the sidebar */
+}
+
+.table {
+  /* Add styling for the table */
+}
