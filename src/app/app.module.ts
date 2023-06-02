@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http'; // Import the HttpClien
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { SharedModule } from './shared/shared.module';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -14,13 +15,14 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule, // Add HttpClientModule here
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    DashboardModule
+    DashboardModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

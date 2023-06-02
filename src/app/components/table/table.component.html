@@ -1,5 +1,4 @@
 <mat-table [dataSource]="dataSource" matSort>
-  <!-- Table columns -->
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
@@ -11,17 +10,19 @@
   </ng-container>
 
   <ng-container matColumnDef="first_name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> First Name
+    </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.first_name }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="last_name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name
+    </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.last_name }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="avatar">
-    <mat-header-cell *matHeaderCellDef> Avatar </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
     <mat-cell *matCellDef="let element">
       <div class="avatar-container">
         <img [src]="element.avatar" alt="Avatar" class="avatar-circle">
@@ -33,4 +34,10 @@
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 
-<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+<mat-paginator #paginator
+  [pageSize]="pageSize"
+  [pageIndex]="pageIndex"
+  [length]="totalItems"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)">
+</mat-paginator>

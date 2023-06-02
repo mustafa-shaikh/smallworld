@@ -1,11 +1,38 @@
 <div class="dashboard-wrapper">
   <app-header></app-header>
+  <div class="searchbar">
+    <app-auto-complete [options]="agentOptions"></app-auto-complete>
+    <app-auto-complete [options]="countryOptions"></app-auto-complete>
+  </div>
   <div class="dashboard-content">
     <div class="sidebar">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="table">
-      <app-table></app-table>
+    <div class="card-table-container">
+      <div class="table">
+        <app-table></app-table>
+      </div>
+      <div class="card-container">
+        <app-card
+          *ngFor="let card of cards"
+          [image]="card.image"
+          [heading]="card.heading"
+          [text]="card.text"
+          class="card"></app-card>
+      </div>
+    </div>
+    <div class="sidebar2">
+
+      <div>
+        <app-list [listItems]="listItems" heading="Phase result"></app-list>
+      </div>
+      <div>
+        <app-search-bar class="searchbar2"></app-search-bar>
+      </div>
+      <div>
+        <app-progress-card [progressValue]="progressValue"></app-progress-card>
+      </div>
+
     </div>
   </div>
 </div>

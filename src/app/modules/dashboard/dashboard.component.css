@@ -11,15 +11,48 @@
 .dashboard-content {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-columns: 1fr 9fr 2fr;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: flex-end; /* Align search bar to the right */
+  gap: 10px;
+}
+
+.searchbar2 {
+  /* display: flex; */
+  /* justify-content: flex-end; Align search bar to the right */
+  /* gap: 10px; */
 }
 
 .sidebar {
   border-right: 1px solid #ccc;
-
   /* Add styling for the sidebar */
+}
+
+.sidebar2 {
+  border-left: 1px solid #ccc;
+  /* Add styling for the second sidebar */
 }
 
 .table {
   /* Add styling for the table */
+}
+
+.card-table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-container {
+  padding: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
 }
